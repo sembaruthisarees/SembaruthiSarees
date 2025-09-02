@@ -1,38 +1,255 @@
-.App {
+/* Reset and theme */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#f02f6d;
+  color: whitesmoke;
+}
+:root {
+  --brand-pink: #d73b82;
+  --yellow: #FDCE04;
+  --brand-purple: #5a2ca0;
+  --text-on-pink: #ffffff;
+  --max-content: 1200px;
+  --hover-bg: rgba(0, 0, 0, 0.15);
+}
+
+/* Background */
+#LandingScreen {
+  height: 100vh;
+  background-image: url(./images/others/bg\(1\).jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--text-on-pink);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.site-header {
+  width: 100vw;
+  padding: 2vh 14.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: var(--yellow);
+  font-family: "Tiro Tamil", serif;
+  font-weight: 500;
+  font-size: 35px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Navbar (desktop) */
+.nav-group {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.link {
+  background-color: var(--yellow);
+  color: #333;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link:hover{
+  background-color: rgb(28, 66, 10);
+  color: antiquewhite;
+}
+
+/* Hero */
+.LandingPageContent {
+  margin: 30vh auto 0;
+  margin-top: 11%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.SaleText {
+  color: var(--yellow);
+  font-family: "Tiro Tamil", serif;
+  font-weight: 400;
+  line-height: 1.2;
+
+  letter-spacing: 1px;
+  font-size: 80px;
+}
+
+.LandingSlogan {
+  max-width: 720px;
+  opacity: .95;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+/* CTAs */
+.cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cta {
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s ease, filter .15s ease;
+  padding: 12px 20px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.cta.primary {
+  background: var(--yellow);
+  color: rgb(75, 75, 75);
+  padding-top: 13px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+.cta.ghost {
+  background: transparent;
+  color: var(--text-on-pink);
+  border: 2px solid rgba(255,234,176,.9);
+}
+
+/* Footer */
+.landing-footer {
+  margin-top: 15px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.note {
+  color: #ffffff;
+  padding: 0px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Icon tweaks */
+
+.browseicon {
+  transform: translateY(2px);
+  margin-right: 0.5rem;
+}
+
+.brandicon {
+  transform: translateY(0.1rem);  
+}
+
+.logo {
+  display: inline;
+}
+.contactDetails{
+  margin-bottom: 50px;
+}
+/* Default: hide mobile nav */
+.mobile-nav {
+  display: none;
+}
+
+.cta:hover{
+  background-color: rgb(28, 66, 10);
+  color: antiquewhite;
+}
+
+@media (max-width: 600px) {
+  #LandingScreen{
+    background-image: url(./images/others/mobile_bg.png);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .site-header {
+    padding: 22px 20px;
+    background-color: #1f9900d2;
+    height: 40px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .brand {
+    font-size: 20px;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color:var(--yellow);
+    font-weight: 900;
+    top: 3px;
+  }
+
+  /* hide desktop nav */
+  .nav-group {
+    display: none;
+  }
+  .brandicon{
+    margin-right: 10px;
+  }
+  /* Bottom fixed nav */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: var(--yellow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile-nav .link {
+    flex: 1;
+    justify-content: center;
+    padding: 0;
+    border-radius: 0;
+    font-size: 22px;
+    color: var(--brand-purple);
+    background: none;
+  }
+
+  /* Hide text labels, show only icons */
+  .mobile-nav .link span {
+    display: none;
+  }
+
+  .SaleText {
+    margin-top: 40px;
+    font-size: 2.3rem;
+  }
+
+  .cta {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .cta.primary {
+    padding-top: 10px;
+  }
+  .subhead {
+    font-size: 14px;
+  }
+
+  .note{
+    font-size: 10px;  
   }
 }
