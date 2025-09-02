@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SembaruthiSarees/static/css/main.f6b8c6cd.css",
-    "main.js": "/SembaruthiSarees/static/js/main.6aac945e.js",
+    "main.js": "/SembaruthiSarees/static/js/main.1f53fe07.js",
     "static/js/453.f3f93ffe.chunk.js": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js",
     "static/media/bg(1).jpg": "/SembaruthiSarees/static/media/bg(1).1de72219107cc37931e0.jpg",
     "static/media/mobile_bg.png": "/SembaruthiSarees/static/media/mobile_bg.e89c15f8e248ddc836e4.png",
     "index.html": "/SembaruthiSarees/index.html",
     "main.f6b8c6cd.css.map": "/SembaruthiSarees/static/css/main.f6b8c6cd.css.map",
-    "main.6aac945e.js.map": "/SembaruthiSarees/static/js/main.6aac945e.js.map",
+    "main.1f53fe07.js.map": "/SembaruthiSarees/static/js/main.1f53fe07.js.map",
     "453.f3f93ffe.chunk.js.map": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6b8c6cd.css",
-    "static/js/main.6aac945e.js"
+    "static/js/main.1f53fe07.js"
   ]
 }
