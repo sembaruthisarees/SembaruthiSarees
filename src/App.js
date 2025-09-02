@@ -1,27 +1,32 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import { Routes,Route } from 'react-router-dom';
-
-
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import bg from "./images/others/bg(1).jpg";
 import { LandingPage } from './LandingPage';
 import SareeDisplay from './SareeDisplay';
 import Cart from './Cart';
 import LatestDesigns from './LatestDesigns';
 import Footer from './Footer';
+
 function App() {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Routes>
-        <Route path='/' element={<div><LandingPage/><LatestDesigns/>
-        </div>}></Route>
-        <Route path='/collections/:itemId' element={<SareeDisplay></SareeDisplay>}></Route>
-        <Route path='/cart' element={<Cart></Cart>}></Route>
-      </Routes>
-      <Footer/>
-    </div>
-    </BrowserRouter>
-
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <div>
+                <LandingPage />
+                <LatestDesigns />
+              </div>
+            } 
+          />
+          <Route path="/collections/:itemId" element={<SareeDisplay />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
