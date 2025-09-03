@@ -2,6 +2,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", serif;
 }
 body{
   background-color:#f02f6d;
@@ -10,7 +11,7 @@ body{
 :root {
   --brand-pink: #d73b82;
   --yellow: #FDCE04;
-  --brand-purple: #5a2ca0;
+  --brand-purple: #430a97;
   --text-on-pink: #ffffff;
   --max-content: 1200px;
   --hover-bg: rgba(0, 0, 0, 0.15);
@@ -26,24 +27,43 @@ body{
   color: var(--text-on-pink);
   position: relative;
   overflow: hidden;
+  margin-top: -60px;
+}
+
+#cart {
+  height: 100vh;
+  background-image: url(./images/others/bg2.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--text-on-pink);
+  position: relative;
+  overflow: hidden;
+  margin-top: -80px;
 }
 
 /* Header */
 .site-header {
-  width: 100vw;
-  padding: 2vh 14.5vw;
+  width: 98vw;
+  padding: 20px 13vw 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  margin: 5px 0px;
+  position: relative;
+  z-index: 1000;
 }
 
 .brand {
   color: var(--yellow);
   font-family: "Tiro Tamil", serif;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
   text-align: left;
+  position: relative;
+  top: 5px;
 }
 
 /* Navbar (desktop) */
@@ -182,9 +202,20 @@ body{
   }
 
   .site-header {
-    padding: 22px 20px;
-    background-color: #1f9900d2;
+    padding: 22px 10px;
+    background-color: #1f9900;
     height: 40px;
+    width: 96vw;
+    border: 1px solid #333;
+    margin: 0px auto;
+  }
+  #header{
+    height: 60px;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    background-color: var(--yellow);
   }
 
   .brand {
@@ -234,7 +265,7 @@ body{
   }
 
   .SaleText {
-    margin-top: 40px;
+    margin-top: 60px;
     font-size: 2.3rem;
   }
 

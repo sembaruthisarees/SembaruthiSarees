@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "image": "./assets/images/1.jpg",
+    "name": "Classic Cotton T-Shirt",
+    "description": "Soft 100% cotton crew-neck tee suitable for daily wear.",
+    "rating": 4.5,
+    "reviews_count": 128,
+    "noOfOrders":10,
+    "price": 499.0,
+    "currency": "INR",
+    "stock_status": "in_stock",
+    "category": "Apparel",
+    "tags": ["cotton", "unisex", "summer"],
+    "delivery_speed": "standard"
+  },
+  {
+    "id": "2",
+    "image": "./assets/images/2.jpg",
+    "name": "Stainless Steel Water Bottle",
+    "description": "Insulated 750ml bottle keeps drinks cold for 24h and hot for 12h.",
+    "rating": 4.3,
+    "reviews_count": 76,
+    "price": 899.0,
+    "currency": "INR",
+    "stock_status": "in_stock",
+    "category": "Home & Kitchen",
+    "tags": ["insulated", "bpa-free", "outdoors"],
+    "delivery_speed": "standard"
+  },
+  {
+    "id": "3",
+    "image": "./assets/images/3.jpg",
+    "name": "Wireless Earbuds",
+    "description": "Bluetooth 5.3 earbuds with ENC microphone and 24h battery life.",
+    "rating": 4.2,
+    "reviews_count": 312,
+    "price": 2499.0,
+    "currency": "INR",
+    "stock_status": "low_stock",
+    "category": "Electronics",
+    "tags": ["bluetooth", "noise-cancel", "sport"],
+    "delivery_speed": "standard"
+  },
+  {
+    "id": "4",
+    "image": "./assets/images/4.jpg",
+    "name": "Eco Bamboo Toothbrush",
+    "description": "Biodegradable handle with soft BPA-free bristles.",
+    "rating": 4.6,
+    "reviews_count": 54,
+    "price": 149.0,
+    "currency": "INR",
+    "stock_status": "in_stock",
+    "category": "Personal Care",
+    "tags": ["eco", "sustainable", "travel"],
+    "delivery_speed": "standard"
+  },
+  {
+    "id": "5",
+    "image": "./assets/images/5.jpg",
+    "name": "Leather Journal",
+    "description": "Handcrafted A5 notebook with acid-free pages.",
+    "rating": 4.4,
+    "reviews_count": 190,
+    "price": 1199.0,
+    "currency": "INR",
+    "stock_status": "preorder",
+    "category": "Stationery",
+    "tags": ["handmade", "gift", "refillable"],
+    "delivery_speed": "standard"
+  }
+]
