@@ -1,9 +1,11 @@
 [
   {
     "id": "1",
-    "thumbnail": "./images/sarees/1.jpg",
+    "thumbnail": "/images/sarees/1.jpg",
     "images": [
-      "./images/sarees/1.jpg"
+      "/images/sarees/1.jpg",
+      "./images/sarees/1_1.jpg",
+      "./images/sarees/1_2.jpg"
     ],
     "name": "Cotton Printed Saree",
     "description": "Elegant cotton saree with traditional prints, perfect for daily and festive wear.",
@@ -11,7 +13,6 @@
     "reviews_count": 220,
     "noOfOrders": 350,
     "price": 399.0,
-    "discountPrice":299,
     "currency": "INR",
     "stock_status": "in_stock",
     "stock_count": 48,
@@ -22,9 +23,9 @@
   },
   {
     "id": "2",
-    "thumbnail": "./images/sarees/2.jpg",
+    "thumbnail": "/images/sarees/2.jpg",
     "images": [
-      "./images/sarees/2.jpg"
+      "/images/sarees/2.png"
     ],
     "name": "Silk Banarasi Saree",
     "description": "Luxurious Banarasi silk saree with golden zari work, ideal for weddings.",
@@ -32,7 +33,6 @@
     "reviews_count": 180,
     "noOfOrders": 210,
     "price": 2499.0,
-    "discountPrice":1999,
     "currency": "INR",
     "stock_status": "low_stock",
     "stock_count": 12,
@@ -43,9 +43,10 @@
   },
   {
     "id": "3",
-    "thumbnail": "./images/sarees/3.jpg",
+    "thumbnail": "/images/sarees/3.jpg",
     "images": [
-      "./images/sarees/3.jpg"
+      "/images/sarees/3.jpg",
+      "/images/sarees/3_1.jpg"
     ],
     "name": "Georgette Embroidered Saree",
     "description": "Lightweight georgette saree with delicate embroidery for party wear.",
@@ -53,7 +54,6 @@
     "reviews_count": 145,
     "noOfOrders": 120,
     "price": 1399.0,
-    "discountPrice":999,
     "currency": "INR",
     "stock_status": "in_stock",
     "stock_count": 25,
@@ -64,9 +64,11 @@
   },
   {
     "id": "4",
-    "thumbnail": "./images/sarees/4.jpg",
+    "thumbnail": "/images/sarees/4.jpg",
     "images": [
-      "./images/sarees/4.jpg"
+      "/images/sarees/4.jpg",
+      "/images/sarees/4_1.jpg",
+      "/images/sarees/4_2.jpg"
     ],
     "name": "Linen Saree",
     "description": "Comfortable linen saree with pastel shades, perfect for summer.",
@@ -84,9 +86,10 @@
   },
   {
     "id": "5",
-    "thumbnail": "./images/sarees/5.jpg",
+    "thumbnail": "/images/sarees/5.jpg",
     "images": [
-      "./images/sarees/5.jpg"
+      "/images/sarees/5.jpg",
+      "/images/sarees/5_1.jpg"
     ],
     "name": "Kanchipuram Silk Saree",
     "description": "Pure Kanchipuram silk saree with intricate temple border design.",
@@ -104,10 +107,10 @@
   },
   {
     "id": "6",
-    "thumbnail": "./images/sarees/6.jpg",
+    "thumbnail": "/images/sarees/6.jpg",
     "images": [
-      "./images/sarees/6.jpg",
-      "./images/sarees/6_1.jpg"
+      "/images/sarees/6.jpg",
+      "/images/sarees/6_1.jpg"
     ],
     "name": "Chiffon Saree",
     "description": "Flowy chiffon saree with floral patterns, great for casual and office wear.",
@@ -125,10 +128,10 @@
   },
   {
     "id": "7",
-    "thumbnail": "./images/sarees/7.jpg",
+    "thumbnail": "/images/sarees/7.jpg",
     "images": [
-      "./images/sarees/7.jpg",
-      "./images/sarees/7_1.jpg"
+      "/images/sarees/7.jpg",
+      "/images/sarees/7_1.jpg"
     ],
     "name": "Cotton Handloom Saree",
     "description": "Handloom cotton saree crafted by skilled weavers, eco-friendly fabric.",
@@ -146,11 +149,11 @@
   },
   {
     "id": "8",
-    "thumbnail": "./images/sarees/8.jpg",
+    "thumbnail": "/images/sarees/8.jpg",
     "images": [
-      "./images/sarees/8.jpg",
-      "./images/sarees/8_1.jpg",
-      "./images/sarees/8_2.jpg"
+      "/images/sarees/8.jpg",
+      "/images/sarees/8_1.jpg",
+      "/images/sarees/8_2.jpg"
     ],
     "name": "Net Designer Saree",
     "description": "Trendy designer saree made of net with sequin work for parties.",

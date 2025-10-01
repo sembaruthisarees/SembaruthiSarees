@@ -1,0 +1,237 @@
+.Collections {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  padding-top: 80px;
+  margin: 0px 200px;
+}
+.collectionsHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collectionsView{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.item {   
+  border-radius: 3px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(128, 128, 128, 0.404);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.item:hover{
+  box-shadow: 1px 1px 10px rgb(190, 190, 190);
+  transform: translateY(-3px);
+}
+.item .itemOFFPercentage {
+  background-color: var(--red);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.05rem 0.5rem;
+  border-radius: 1px;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03rem;
+  align-self: flex-end;
+}
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.item .itemCode{
+    font-size: 0.8rem;
+    color: rgb(122, 122, 122);
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+.item .itemName{
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+.item .itemDescription{
+    font-size: 0.9rem;
+    color: #464646;
+    margin-bottom: 0.2rem;
+}
+.item .itemOfferPrice{
+    color: var(--red);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.item .itemOriginalPrice{
+    color: var(--black);
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    margin-left: 0.3rem
+}
+.item .itemOptions{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+}
+.itemOptions .buyNow,.itemOptions .addToCart{
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 5px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.itemOptions .buyNow:hover,.itemOptions .addToCart:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+.itemOptions .buyNow{
+    background-color: var(--black);
+    color: var(--white);
+
+}
+.itemOptions .addToCart{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.collectionsHeading>h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+.collectionsHeading hr{
+    width: 250px;
+    text-align: center;
+    height: 2px;
+    background-color: var(--black);
+    margin-top: 10px;
+}
+.collectionssortby{
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+}
+.collectionssortby label{
+    font-weight: 600;
+    padding-right: 10px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1px;
+}
+.collectionssortby select{
+    padding: 2px 20px;
+}
+.collectionssortby option,.collectionssortby select{
+    font-weight: 600;
+    font-family: poppins;
+    border-radius: 2px;
+}
+
+/* Tablet / Medium screens */
+@media (max-width: 1024px) {
+  .Collections {
+    margin: 0 50px;
+    padding: 2rem 1rem;
+    padding-top: 80px;
+  }
+
+  .collectionsView {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    box-sizing: border-box;
+  }
+
+  .item img {
+    height: 250px;
+  }
+
+  .collectionsHeading > h2 {
+    font-size: 1.2rem;
+  }
+
+  .collectionssortby {
+    margin-top: 20px;
+  }
+
+  .collectionssortby select {
+    padding: 2px 15px;
+  }
+
+  .itemOptions .buyNow,
+  .itemOptions .addToCart {
+    font-size: 0.75rem;
+    padding: 8px 0;
+  }
+}
+
+/* Mobile / Small screens */
+@media (max-width: 480px) {
+  .Collections {
+    margin: 0 15px;
+    padding: 1.5rem 1rem;
+    padding-top: 70px;
+  }
+
+  .collectionsView {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .item img {
+    height: 250px;
+  }
+
+  .collectionsHeading > h2 {
+    font-size: 1rem;
+  }
+
+  .collectionsHeading hr {
+    width: 150px;
+    height: 1.5px;
+  }
+
+  .collectionssortby {
+  }
+
+  .collectionssortby label,
+  .collectionssortby select {
+    font-size: 0.8rem;
+
+  }
+
+  .item .itemName {
+    font-size: 1rem;
+  }
+
+  .item .itemOfferPrice {
+    font-size: 1rem;
+  }
+
+  .item .itemOriginalPrice {
+    font-size: 0.85rem;
+  }
+
+  .itemOptions .buyNow,
+  .itemOptions .addToCart {
+    font-size: 0.82m;
+    padding: 8px 0;
+  }
+}

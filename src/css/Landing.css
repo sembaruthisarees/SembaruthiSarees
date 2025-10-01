@@ -1,0 +1,214 @@
+.main-page{
+    display: flex;
+    justify-content: center;
+    margin: 0px 200px;
+    background-color: var(--white);
+    padding-top: 60px;
+}
+#LandingScreen{
+    text-align: center;
+    width: 60%;
+    color: var(--white);
+}
+.landingImage{
+    background-image: url(../images/others/2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 700px;
+    height: 94vh;
+}
+.LandingPageContent{
+    margin: 10%;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--black);
+}
+.LandingPageContent h2{
+    font-weight: 200;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    font-family: "DM Serif Text", serif;
+    text-align: center;
+    color: var(--black);
+}
+.LandingSlogan{
+    font-family: "Anek Tamil", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    color: var(--red);
+}
+.landingButtons{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.primary-hover,.secondary-hover{
+    flex: 1;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+    box-shadow: 1px 1px 5px black;
+}
+.primary-hover:hover,.secondary-hover:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+.primary-hover{
+    background-color: var(--black);
+    color: white;
+}
+.secondary-hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.browseicon{
+    position: relative;
+    top: 2px;
+    right: 5px;
+    z-index: 0;
+    font-size: 0.9rem;
+}
+.landing-footer{
+    position: relative;
+    top: -15px;
+    letter-spacing: 0.5;
+}
+
+.girdviewicons{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+}
+.girdview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250;
+    height: 150px;
+    padding: 0px 50px;
+    font-weight: 600;
+}
+.girdview .icon{
+    font-size: 3rem;
+    color: var(--red);
+    padding-bottom: 20px;
+}
+  .mobileON{
+    display: none;
+  }
+
+@media (max-width: 1024px) {
+  .landingImage {
+    background-image: url(../images/others/mobile_bg.png);
+    background-size: cover;
+    background-position: top;
+    height: 50vh;
+  }
+  .mobileON{
+    display: grid;
+  }
+  .main-page {
+    margin: 0 0px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  #LandingScreen {
+    width: 100%;
+  }
+  .landingImage {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .LandingPageContent {
+    margin: 5%;
+    margin-top: 10%;
+    gap: 20px;
+  }
+
+  .LandingPageContent h2 {
+    font-size: 3rem;
+  }
+
+  .landingButtons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .primary-hover, .secondary-hover {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .girdview {
+    padding: 0 20px;
+
+  }
+
+  .girdviewicons {
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-page {
+    margin: 0 0px;
+    padding-top: 45px;
+  }
+.LandingPageContent{
+    margin-top: 5%;
+}
+  #LandingScreen {
+    width: 100%;
+  }
+
+  .landingImage {
+    background-image: url(../images/others/mobile_bg.png);
+    background-size: cover;
+    background-position: top;
+    height: 50vh;
+  }
+
+  .LandingPageContent h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .LandingSlogan {
+    font-size: 0.7rem;
+  }
+
+  .landingButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .primary-hover, .secondary-hover {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .girdview {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .girdview .icon {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,38 @@
+.mobile-nav{
+    display: none;
+}
+.mainFooter{
+  margin-top: auto;
+  color: var(--white);
+  background: var(--black);
+}
+.footer{
+  padding: 8px;
+  text-align: left;
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 200 ;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+.footer p{
+  text-align: left;
+  padding: 5px;
+}
+#copyrights {
+  flex: 1 1 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+@media (max-width:1024px){
+    .footer{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:540px){
+    .footer{
+        font-size: 0.6rem;
+        justify-content: start;
+    }
+}
