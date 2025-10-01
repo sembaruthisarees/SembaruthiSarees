@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/SembaruthiSarees/static/css/main.4dda6b41.css",
-    "main.js": "/SembaruthiSarees/static/js/main.fde2d49a.js",
+    "main.css": "/SembaruthiSarees/static/css/main.a3d9e586.css",
+    "main.js": "/SembaruthiSarees/static/js/main.2a92f421.js",
     "static/js/453.f3f93ffe.chunk.js": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js",
-    "static/media/bg2.png": "/SembaruthiSarees/static/media/bg2.2b330b38cc6500f1131a.png",
-    "static/media/bg(1).jpg": "/SembaruthiSarees/static/media/bg(1).1de72219107cc37931e0.jpg",
-    "static/media/mobile_bg.png": "/SembaruthiSarees/static/media/mobile_bg.e89c15f8e248ddc836e4.png",
+    "static/media/mobile_bg.png": "/SembaruthiSarees/static/media/mobile_bg.302b19612b5ae0db09bb.png",
+    "static/media/2.jpg": "/SembaruthiSarees/static/media/2.a2f63c5f9c26d7c11a93.jpg",
+    "static/media/logo.jpg": "/SembaruthiSarees/static/media/logo.b26be12f646c6afa2775.jpg",
+    "static/media/contcat.jpg": "/SembaruthiSarees/static/media/contcat.46fa90af07eb45d53f4e.jpg",
     "index.html": "/SembaruthiSarees/index.html",
-    "main.4dda6b41.css.map": "/SembaruthiSarees/static/css/main.4dda6b41.css.map",
-    "main.fde2d49a.js.map": "/SembaruthiSarees/static/js/main.fde2d49a.js.map",
+    "main.a3d9e586.css.map": "/SembaruthiSarees/static/css/main.a3d9e586.css.map",
+    "main.2a92f421.js.map": "/SembaruthiSarees/static/js/main.2a92f421.js.map",
     "453.f3f93ffe.chunk.js.map": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dda6b41.css",
-    "static/js/main.fde2d49a.js"
+    "static/css/main.a3d9e586.css",
+    "static/js/main.2a92f421.js"
   ]
 }
