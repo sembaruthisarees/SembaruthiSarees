@@ -1,7 +1,7 @@
 import "../css/Collections.css";
 import { useContext } from "react";
 import { DataContext } from "../Utilities/DataProvider";
-
+import { FaShoppingCart} from "react-icons/fa";
 export default function Collections(){
 
   const {items,setitems, sendBuyMessage,cartCheck,handleAddToCart} = useContext(DataContext);
@@ -51,7 +51,7 @@ export default function Collections(){
                       color: cartCheck(item.id) ? "#000" : "#ffffffff",
                     }}
                   >
-                    {cartCheck(item.id) ? "✅ Added" : "Add to Cart"}
+                    {cartCheck(item.id) ? <span>Go to Cart <FaShoppingCart className="icons" /></span> : "Add to Cart"}
                   </p>
               </div>
             </div>

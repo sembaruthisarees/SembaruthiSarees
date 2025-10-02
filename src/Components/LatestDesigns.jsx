@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../Utilities/DataProvider";
+import { FaShoppingCart} from "react-icons/fa";
 import '../css/LatestCollection.css'
 import { FaTruck, FaSmile, FaCreditCard, FaHandshake } from "react-icons/fa";
 const LatestDesigns = () => {
@@ -31,7 +32,7 @@ const LatestDesigns = () => {
                       color: cartCheck(item.id) ? "#000" : "#ffffffff",
                     }}
                   >
-                    {cartCheck(item.id) ? "Added ✅ " : "Add to Cart"}
+                    {cartCheck(item.id) ? <span>Go to Cart <FaShoppingCart className="icons" /></span> : "Add to Cart"}
                   </p>
               </div>
             </div>

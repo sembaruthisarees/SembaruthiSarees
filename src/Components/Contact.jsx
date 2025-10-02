@@ -4,23 +4,10 @@ import {DataContext} from "../Utilities/DataProvider";
 import { useContext } from "react";
 const Contact = () => {
         
-    const {PHONENUMBER,EMAIL} = useContext(DataContext);
+    const {PHONENUMBER,EMAIL,contactNumber,setContactNumber,usernName,setuserName,numberColor,numberChange} = useContext(DataContext);
     const [messageChoice,setmessageChoice] = useState('whatsApp')
     const [message,setmessage] = useState('')
-    const [usernName,setuserName] = useState('')
-    const [contactNumber,setContactNumber] = useState('')
-    const [numberColor,setnumberColor] = useState("#000000")
 
-    function numberChange(e){
-        setContactNumber(e.target.value)
-        if(contactNumber.length<9){
-        setnumberColor("#ff0101ff")
-        return
-        }
-        else{
-            setnumberColor("#000000ff")
-        }
-    }
     function sendMessage(e){
         e.preventDefault()
         if(contactNumber.length<9){
@@ -69,8 +56,7 @@ const Contact = () => {
                             <div className='emailMessageChoice'>
                                 <input type='checkBox' value="email" checked={messageChoice==='email'} onChange={()=>setmessageChoice('email')}/> 
                                 <label htmlFor='email'>Email ✉️</label>
-                            </div>
-                                        
+                            </div>       
                         </div>
                         {(messageChoice==='whatsApp')?
                         <button type="submit" onSubmit={sendMessage}>Send WhatsApp Messsage 💬</button>:
