@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SembaruthiSarees/static/css/main.b7335069.css",
+    "main.css": "/SembaruthiSarees/static/css/main.44de0373.css",
     "main.js": "/SembaruthiSarees/static/js/main.bb509f6a.js",
     "static/js/453.f3f93ffe.chunk.js": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js",
     "static/media/mobile_bg.png": "/SembaruthiSarees/static/media/mobile_bg.302b19612b5ae0db09bb.png",
@@ -8,12 +8,12 @@
     "static/media/logo.jpg": "/SembaruthiSarees/static/media/logo.b26be12f646c6afa2775.jpg",
     "static/media/contcat.jpg": "/SembaruthiSarees/static/media/contcat.46fa90af07eb45d53f4e.jpg",
     "index.html": "/SembaruthiSarees/index.html",
-    "main.b7335069.css.map": "/SembaruthiSarees/static/css/main.b7335069.css.map",
+    "main.44de0373.css.map": "/SembaruthiSarees/static/css/main.44de0373.css.map",
     "main.bb509f6a.js.map": "/SembaruthiSarees/static/js/main.bb509f6a.js.map",
     "453.f3f93ffe.chunk.js.map": "/SembaruthiSarees/static/js/453.f3f93ffe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7335069.css",
+    "static/css/main.44de0373.css",
     "static/js/main.bb509f6a.js"
   ]
 }
