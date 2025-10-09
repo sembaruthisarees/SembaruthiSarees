@@ -1,7 +1,9 @@
 import React from 'react'
 import '../css/Cart.css'
 import { useContext,useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 import { DataContext } from "../Utilities/DataProvider";
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -12,7 +14,7 @@ const Cart = () => {
   const [errMessage,setErrorMessage] = useState('');
   const [checkout,setcheckout] = useState(false);
   const [address,setAddress] = useState('');
-  const [orderMessage,setOrderMessage] = useState('');
+  const [errID,seterrID] = useState(-1);
 
   function sendOrderMessage(e){
     e.preventDefault()
@@ -30,9 +32,11 @@ const Cart = () => {
       if(item.stock_count > cartCount(item.id)){
         addToCart(item.id)
         setErrorMessage("")
+        seterrID(id)
         console.log(item.stock_count,"yes",cartCount(item.id))
       }
       else{
+        seterrID(id)
         setErrorMessage("Thats All we have in Stock")
       }
     }
@@ -42,21 +46,25 @@ const Cart = () => {
     const item = cartItemData.find((item)=>item.id===id)
     if(item){
       if(item.stock_count >= cartCount(item.id)){
+        seterrID(id)
         setErrorMessage("")
       }
     }
   }
  return (
     <div id='cart'>
-      <div className="CartHeading">
+      <div className="cartHeading">
           <h2>CART SECTION</h2>
-          <hr></hr>
+          <hr id='cartRuler'></hr>
       </div>
       <div className="stockCart">
         {
           (!checkout)?(
             (cartItemData.length===0)?
-            <div className="noCartItems">Cart length is Zero</div>:
+            <div className="noCartItems">
+              <div id="nocartIamge"></div>
+              <p>Your cart is Empty ! Try addig Some items</p>
+              <Link id='carShoppingButton'to='/collections'>Start Shopping</Link></div>:
             <div className="CartItemsDisplay">
               {
                 cartItemData.map((item)=>(
@@ -68,15 +76,15 @@ const Cart = () => {
                     <div className="cartItemDisplayRightSide">
                       <p className="cartItemOFFPercentage">{Math.floor(100-((item.discount_price/item.price)*100))}% OFF</p>
                       <h4>{item.name}</h4>
-                      <p>{item.description}</p>
+                      <p id='cartItemDesc'>{item.description}</p>
                       <div className="cartItemCountDisplay">
-                        <button id='increamentItem' onClick={()=>handleCartIncreament(item.id)}>+</button>
-                        <p>{cartCount(item.id)}</p>
-                        <button id='decreamentItem' onClick={()=>handleCartDecreament(item.id)}>-</button>
-                        <div className="errorDisplay">{errMessage}</div>
+                        <p id='increamentItem' onClick={()=>handleCartIncreament(item.id)}>< FaPlus/></p>
+                        <p id='cartitemcount'>{cartCount(item.id)}</p>
+                        <p id='decreamentItem' onClick={()=>handleCartDecreament(item.id)}><FaMinus/></p>
+                        <div className="errorDisplay">{(errID===item.id)?errMessage:''}</div>
                       </div>
                       <div className="cartItemDisplayPrice">
-                        <p>{item.discount_price}</p>
+                        <p>&#8377;{Math.floor(item.discount_price)}</p>
                         <del>{item.price}</del>
                       </div>
                     </div>
@@ -84,7 +92,19 @@ const Cart = () => {
                 ))
               }
             </div>
-          ):""
+          ):
+          <div className='deliveryDetailsFrame'>
+              <div className="subHeading">
+                <p id='deliveryDetailsHeading'>DELIVERY DETAILS</p>
+                <hr></hr>
+              </div>
+              <form className='DeliveryDetails' onSubmit={sendOrderMessage}>
+                <input className='deliveryDetailsUserName DeliveryDetailscomponent ' name='USERNAME' type="text" placeholder="Your Name" value={usernName} onChange={(e)=>setuserName(e.target.value)} required />
+                <input className='deliveryDetailsContactNumber DeliveryDetailscomponent' name='CONTACTNUMBER' placeholder="Your Contact Number (+91)"type="tel" style={{color:numberColor}} value={contactNumber} onChange = {numberChange} required />
+                <textarea className='deliveryDetailsAddress DeliveryDetailscomponent' name='USERNAME' type="text" placeholder="Your Full Address with PINCODE" value={address} onChange={(e)=>setAddress(e.target.value)} required />
+                <button id='placeOrderButton' type='submit' >PLACE ORDER REQUEST</button>
+              </form>
+          </div>
         }
         {(cartItemData.length!==0)?
         <div className="cartSummaryDisplay">
@@ -92,24 +112,33 @@ const Cart = () => {
             <p id='cartSummary-Heading'>CART SUMMARY</p>
             <hr></hr>
           </div>
-          <p>Total Price &#8377;{totalPrice}</p>
-          <p>Discount &#8377;{totalDiscount} [ {discountApplied}% ]</p>
-          <p>{(freeDeliveryCheck())?<del>Delivery Fee ₹50</del>:'Delivery Fee ₹50'}</p>
-          <p>{(freeDeliveryCheck())?'':'(Free Delivery on Orders Above ₹499)'}</p>
-          <p id='finalPayableAmount'>To Pay &#8377;{Math.floor(toPay)}</p>
+          <div className="cartpricedisplay">
+            <p>Total Price</p>
+            <p className='summaryprice'>₹{totalPrice}</p>
+          </div>
+
+          <div className="cartpricedisplay">
+            <p>Discount Reduction</p>
+            <p className='summaryprice'>- ₹{totalDiscount}</p>
+          </div>
+
+          <div className="cartpricedisplay">
+            <p>Delivery Fee</p>
+            <p className='summaryprice' >{freeDeliveryCheck() ? <del>₹50</del> : '₹50'}</p>
+          </div>
+          <div className="cartpricedisplay">
+            <p id='deliveryMessage' >{(freeDeliveryCheck())?'':'Free Delivery on Orders Above ₹499'}</p>
+          </div>
+
+          <div className="cartpricedisplay">
+            <p>To Pay</p>
+            <p id="finalPayableAmount" className='summaryprice' >₹{Math.floor(toPay)}</p>
+          </div>
+
           {(!checkout)?<button id='proceedToCheckOut' onClick={()=>setcheckout((prev=>!prev))}>PROCEED TO CHECKOUT</button>:
             <div className="deliveryDetails">
               <button id='proceedToCheckOut' onClick={()=>setcheckout((prev=>!prev))}>EDIT CART ITEMS</button>
-              <div className="deliveryDetailsHeading">
-                <h2 id='deliveryDetailsHeading'>Delivery Details</h2>
-                <hr></hr>
-              </div>
-              <form onSubmit={sendOrderMessage}>
-                <input className='deliveryDetailsUserName' name='USERNAME' type="text" placeholder="Your Name" value={usernName} onChange={(e)=>setuserName(e.target.value)} required />
-                <input className='deliveryDetailsContactNumber' name='CONTACTNUMBER' placeholder="Your Contact Number (+91)"type="tel" style={{color:numberColor}} value={contactNumber} onChange = {numberChange} required />
-                <textarea className='deliveryDetailsAddress' name='USERNAME' type="text" placeholder="Your Full Address with PINCODE" value={address} onChange={(e)=>setAddress(e.target.value)} required />
-                <button id='placeOrderButton' type='submit' >PLACE ORDER REQUEST</button>
-              </form>
+
             </div>
           }
         </div>:''

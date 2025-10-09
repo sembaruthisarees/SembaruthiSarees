@@ -28,6 +28,21 @@
 @media (max-width:1024px){
     .footer{
         font-size: 0.7rem;
+        padding-bottom: 8vh;
+    }
+    .mobile-nav{
+      display: block;
+      position: fixed;
+      top: 88vh;
+      height: 12vh;
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15px;
+      background-color: var(--black);
+      width: 100%;
+    }
+    .mobile-nav .link{
+      font-size: 1.2rem;
     }
 }
 @media (max-width:540px){
@@ -35,4 +50,5 @@
         font-size: 0.6rem;
         justify-content: start;
     }
+
 }

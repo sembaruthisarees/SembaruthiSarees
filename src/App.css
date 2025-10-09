@@ -8,6 +8,7 @@
   --pink:#f6aeff;
   --yellow:#dac400;
   --green:rgb(0, 53, 0);
+  --lightred:#ad2c2c;
 }
 .App{
   flex: 1;  
